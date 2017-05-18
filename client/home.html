@@ -1,0 +1,14 @@
+<template name="home">
+    <div class="list-group">
+        <a href="/whiteboard/" class="list-group-item active text-center">+</a>
+        {{#each whiteboards}}
+            <a href="/whiteboard/{{_id}}" class="list-group-item">
+                {{#if name}}
+                {{name}}
+                    {{else}}
+                    Brak nazwy <small>{{_id}}</small>
+                {{/if}}
+            </a>
+        {{/each}}
+    </div>
+</template>
